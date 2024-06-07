@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
- <link rel="stylesheet" type="text/css" href="styles.css">
- 
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
     
- <div id="calculator">
-    <input type="text" id="display" disabled>
-    <div id="buttons">
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="appendNumber(7)">7</button>
-      <button onclick="appendNumber(8)">8</button>
-      <button onclick="appendNumber(9)">9</button>
-      <button onclick="appendNumber(4)">4</button>
-      <button onclick="appendNumber(5)">5</button>
-      <button onclick="appendNumber(6)">6</button>
-      <button onclick="appendNumber(1)">1</button>
-      <button onclick="appendNumber(2)">2</button>
-      <button onclick="appendNumber(3)">3</button>
-      <button onclick="appendNumber(0)">0</button><br>
-      <button onclick="performOperation('/')">/</button>
-      <button onclick="performOperation('*')">*</button>
-      <button onclick="performOperation('-')">-</button>
-      <button onclick="performOperation('+')">+</button>
-      <button onclick="calculateResult()">=</button>
+</head>
+
+<body>
+    <div class="container">
+        <h1 type="text" class="display" id="display"></h1>
+        <div class="row">
+
+            <button class="button" onclick="deleteDisplay()" id="ac">AC</button>
+            <button class="button" onclick="remove()" id="de">DE</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="digin(7)" name="digits" id="7">7</button>
+            <button class="button" onclick="digin(8)" name="digits" id="8">8</button>
+            <button class="button" onclick="digin(9)" name="digits" id="9">9</button>
+            <button class="button" onclick="opp('+')" id="+">+</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="digin(4)" name="digits" id="4">4</button>
+            <button class="button" onclick="digin(5)" name="digits" id="5">5</button>
+            <button class="button" onclick="digin(6)" name="digits" id="6">6</button>
+            <button class="button" onclick="opp('-')" id="-">-</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="digin(1)" name="digits" id="1">1</button>
+            <button class="button" onclick="digin(2)" name="digits" id="2">2</button>
+            <button class="button" onclick="digin(3)" name="digits" id="3">3</button>
+            <button class="button" onclick="opp('*')" id="*">*</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="digin(0)" name="" id="0">0</button>
+            <button class="button" onclick="result()" id="=">=</button>
+            <button class="button" onclick="opp('/')" id="/">/</button>
+        </div>
     </div>
- </div>
- <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
